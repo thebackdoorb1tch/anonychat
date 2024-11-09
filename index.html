@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonychat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">Anonychat</a>
+    <div class="header-links">
+      <a href="/login" class="button">Login</a>
+      <a href="/signup" class="button">Sign Up</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Subreddits</h3>
+      <ul>
+        <li><a href="#" class="button">Tech</a></li>
+        <li><a href="#" class="button">Gaming</a></li>
+        <li><a href="#" class="button">News</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Example Post -->
+      <div class="post" id="post-1">
+        <h2>Post Title 1</h2>
+        <p>This is a brief post description or content.</p>
+        <div class="buttons">
+          <button class="button upvote" data-post-id="1">Upvote</button>
+          <button class="button comment" data-post-id="1">Comment</button>
+        </div>
+        <div class="comments-section">
+          <h3>Comments</h3>
+          <div class="comments" id="comments-1">
+            <!-- Comments will be inserted dynamically -->
+          </div>
+          <textarea id="comment-input-1" placeholder="Add a comment..."></textarea>
+          <button class="button add-comment" data-post-id="1">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Anonychat. All rights reserved.</p>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
