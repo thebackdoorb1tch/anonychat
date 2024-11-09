@@ -8,14 +8,15 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <a href="/" class="logo">Anonychat</a>
     <div class="header-links">
-      <a href="/login" class="button">Login</a>
-      <a href="/signup" class="button">Sign Up</a>
+      <button id="addPostBtn" class="button">Add Post</button>
     </div>
   </header>
 
+  <!-- Main Content -->
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -27,33 +28,29 @@
       </ul>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Example Post -->
-      <div class="post" id="post-1">
-        <h2>Post Title 1</h2>
-        <p>This is a brief post description or content.</p>
-        <div class="buttons">
-          <button class="button upvote" data-post-id="1">Upvote</button>
-          <button class="button comment" data-post-id="1">Comment</button>
-        </div>
-        <div class="comments-section">
-          <h3>Comments</h3>
-          <div class="comments" id="comments-1">
-            <!-- Comments will be inserted dynamically -->
-          </div>
-          <textarea id="comment-input-1" placeholder="Add a comment..."></textarea>
-          <button class="button add-comment" data-post-id="1">Submit</button>
-        </div>
-      </div>
+    <!-- Post Listings -->
+    <div class="main-content" id="postsContainer">
+      <!-- Posts will be dynamically inserted here -->
     </div>
   </div>
 
+  <!-- Post Modal -->
+  <div id="postModal" class="modal">
+    <div class="modal-content">
+      <h2>Create a Post</h2>
+      <input type="text" id="postTitle" placeholder="Post Title" />
+      <textarea id="postContent" placeholder="Post Content"></textarea>
+      <button id="submitPostBtn">Submit</button>
+      <button id="cancelPostBtn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Anonychat. All rights reserved.</p>
   </footer>
 
-  <script src="/socket.io/socket.io.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
+
